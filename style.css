@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header {
+    color: aliceblue;
+    background-color:black;
+    font-size: 30px;
+    top: 50px;
+    left: 50px;
+}
+
+li {
+    display:inline-flex;
+    align-items: center;
+    color: aliceblue;
+    transition: 500ms;
+    justify-content: space-around;
+}
+
+li:hover{
+    cursor: pointer;
+    color: red; 
+}
+
+body {
+    background-color: brown;
+    
+    /* altura de 100 vh é equivalente a 100% do espaço da tela 
+    vh = view heigth*/
+    
+    height: 100vh;
+
+    /* largura de 100 vw é equivalente a 100% do espaço da tela 
+    vh = view width*/
+
+    width: 150vw;
+
+        /* position static é o padrão quando não há position defino*/
+
+    position: static;
+}
+
+form {
+    background-color: black;
+    color: aliceblue;
+    font-size: 1.25rem;
+}
+
+/*
+.pai { 
+    background-color: darkorange;
+    height: 300px;
+    width: 300px;
+    /* posição relativa do pai orienta o filho
+    
+    position: relative;      
+} */
+
+/*
+.filho { 
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    
+    /* posição do filho em relação ao posição do pai, se o pai for relative
+
+    position: absolute;
+    bottom: 50px; 
+} */
+
+footer {
+
+    /* imagem de fundo também pode vir de uma pasta */
+
+    background-color: darkblue;
+    background-image: url("https://abrir.link/DiXma");
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    /* background position também pode ser em porcentagem, contendo dois valores em % */
+
+    width: 500px;
+    height: 500px;
+
+    /*quando há 2 valores, primeiro se refere a vertival e o segundo a horizontal
+    quando há 4 valores, a ordem segue em sentido horário, começando pelo topo */
+
+    margin: 50px 20px;
+    padding: 50px;
+    border: 5px solid whitesmoke;
+
+    /* tipos de borda: solid, double, dotted, dashed
+    círculo perfeito, border-radius = 50%       */
+
+    border-radius: 50px;
+
+/* site para cores hexadecimais ou outros tipos https://www.w3schools.com/colors/colors_picker.asp */}
+
+.teste {
+    background-color: green;
+    transition: 500ms;
+}
+
+.teste:hover {
+    background-color: aqua;
+ }
+
+.testeinput {
+    border-color: blue;
+ }
+
+.testeinput:disabled {
+    border-color: lime;
+    background-color: red;
+  }
+
+.testeclasse::before{ 
+    content: "→";
+  }
+
+.testeclasse::after{ 
+    content: "⇍";
+  }
+
+.testeclasse { 
+    display: inline;
+    background-color: yellow;
+  }
+
+.span1 {
+    height: 250px;
+    width: 250px;
+    background-color: chocolate;
+   
+/*
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-content: center;  
+*/
+
+    display: grid;
+/*  grid-template-columns: 1fr 1fr 1fr; */
+
+/* colunas podem ser colocadas em porcentagem ou em px
+grid-template também pode ser feito em rows (menos comumm)*/
+
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+
+}
+
+.span2 {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    border: 2px solid gray;
+    text-align: center;
+}
+
+.testekeyf {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    animation: animation;
+    animation-duration: 5s;
+    position: absolute;
+}
+
+@keyframes animation {
+    from {
+        border-radius: 0%;
+        background-color: black;
+    }    
+    
+    to {
+        border-radius: 50%;
+        background-color: blanchedalmond;
+    }
+    
+    0% { 
+        left: 0px
+    }
+
+    25% {
+        left: 50px;
+    }
+
+    50% {
+        left: 100px;
+    }
+    
+    100% {
+        left: 200px;
+    }
+}
+
+/* breaking point é o ponto, em pixels, em que um site se adapta a uma tela (responsividade) */
+
+/* Media Query */
+
+@media(min-width: 1000px){
+    .span2{
+        background-color: black;
+    }
+}
+
+@media(min-width: 800px){
+    .span2{
+        background-color: blueviolet;
+    }
+}
